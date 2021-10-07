@@ -32,7 +32,7 @@ namespace UomsSample
             string namespaceId = _configuration["NamespaceId"];
             string resource = _configuration["Resource"];
             string clientId = _configuration["ClientId"];
-            string clientKey = _configuration["ClientKey"];
+            string clientSecret = _configuration["ClientSecret"];
             string apiVersion = _configuration["ApiVersion"];
 
             string resourcePrefix = "UomSample";
@@ -41,7 +41,7 @@ namespace UomsSample
             string streamWithoutPropertyOverridden = $"{resourcePrefix} UomNoPropertyOverridden";
 
             // Step 1 
-            AuthenticationHandler authenticationHandler = new AuthenticationHandler(new Uri(resource), clientId, clientKey);
+            AuthenticationHandler authenticationHandler = new AuthenticationHandler(new Uri(resource), clientId, clientSecret);
             SdsService service = new SdsService(new Uri(resource), authenticationHandler);
 
             ISdsMetadataService metadataService = service.GetMetadataService(tenantId, namespaceId);

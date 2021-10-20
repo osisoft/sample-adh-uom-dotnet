@@ -1,5 +1,9 @@
 # Version History
 
+## 1.1.17 / 2021-10-20
+
+- Update name of data service variable
+
 ## 1.1.16 / 2021-10-07
 
 - Update pipelines to use Azure Key Vault for secrets

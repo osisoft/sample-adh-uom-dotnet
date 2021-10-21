@@ -45,7 +45,7 @@ namespace UomsSample
             SdsService service = new SdsService(new Uri(resource), authenticationHandler);
 
             ISdsMetadataService metadataService = service.GetMetadataService(tenantId, namespaceId);
-            ISdsDataService sataService = service.GetDataService(tenantId, namespaceId);
+            ISdsDataService dataService = service.GetDataService(tenantId, namespaceId);
             try
             {
                 /*
@@ -126,25 +126,25 @@ namespace UomsSample
                  * inserted as kilometer, as we have overridden the Distance property in stream one, 
                  * regardless of the default uom for Distance in the Widget class.
                  */
-                await sataService.InsertValuesAsync<Widget>(sdsStreamOne.Id, data).ConfigureAwait(false);
+                await dataService.InsertValuesAsync<Widget>(sdsStreamOne.Id, data).ConfigureAwait(false);
 
                 /* In stream two, the temperature value will be inserted as Fahrenheit and the distance will be inserted as mile.
                  *
                  */
-                await sataService.InsertValuesAsync<Widget>(sdsStreamTwo.Id, data).ConfigureAwait(false);
+                await dataService.InsertValuesAsync<Widget>(sdsStreamTwo.Id, data).ConfigureAwait(false);
 
                 // Step 6
                 /*
                  * The last value stored in stream one. 
                  */
-                Widget widgetFromStreamOne = await sataService.GetLastValueAsync<Widget>(sdsStreamOne.Id).ConfigureAwait(false);
+                Widget widgetFromStreamOne = await dataService.GetLastValueAsync<Widget>(sdsStreamOne.Id).ConfigureAwait(false);
 
                 Console.WriteLine($"In stream one, the distance is {widgetFromStreamOne.Distance} kilometers and the temperature is {widgetFromStreamOne.Temperature} degrees fahrenheit");
                 Console.WriteLine();
                 /*
                  * The last value stored in stream two. 
                  */
-                Widget widgetFromStreamTwo = await sataService.GetLastValueAsync<Widget>(sdsStreamTwo.Id).ConfigureAwait(false);
+                Widget widgetFromStreamTwo = await dataService.GetLastValueAsync<Widget>(sdsStreamTwo.Id).ConfigureAwait(false);
 
                 Console.WriteLine($"In stream two, the distance is {widgetFromStreamTwo.Distance} miles and the temperature is {widgetFromStreamTwo.Temperature} degrees fahrenheit");
                 Console.WriteLine();
@@ -178,7 +178,7 @@ namespace UomsSample
                  * Uoms in Stream one (Temperature : Fahrenheit, Distance : Kilometer)
                  * 
                  */
-                widgetFromStreamOne = await sataService.GetLastValueAsync<Widget>(sdsStreamOne.Id, requestOverrides).ConfigureAwait(false);
+                widgetFromStreamOne = await dataService.GetLastValueAsync<Widget>(sdsStreamOne.Id, requestOverrides).ConfigureAwait(false);
 
                 Console.WriteLine($"In stream one, the distance is {widgetFromStreamOne.Distance} foot and the temperature is {widgetFromStreamOne.Temperature} degrees celsius");
                 Console.WriteLine();
@@ -190,7 +190,7 @@ namespace UomsSample
                  * Uoms in Stream two (Temperature : Fahrenheit, Distance : Mile) 
                  * 
                  */
-                widgetFromStreamTwo = await sataService.GetLastValueAsync<Widget>(sdsStreamTwo.Id, requestOverrides).ConfigureAwait(false);
+                widgetFromStreamTwo = await dataService.GetLastValueAsync<Widget>(sdsStreamTwo.Id, requestOverrides).ConfigureAwait(false);
 
                 Console.WriteLine($"In stream two, the distance is {widgetFromStreamTwo.Distance} foot and the temperature is {widgetFromStreamTwo.Temperature} degrees celsius");
                 Console.WriteLine();

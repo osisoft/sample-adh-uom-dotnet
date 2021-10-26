@@ -1,8 +1,12 @@
 # Version History
 
-## 1.1.17 / 2021-10-21
+## 1.1.18 / 2021-10-21
 
 - Updated dependencies
+
+## 1.1.17 / 2021-10-20
+
+- Update name of data service variable
 
 ## 1.1.16 / 2021-10-07
 

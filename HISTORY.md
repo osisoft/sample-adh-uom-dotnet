@@ -1,5 +1,10 @@
 # Version History
 
+## 1.1.23 / 2022-04-15
+
+- Updated editorconfig rules for var vs explicit types
+- Applied best practices to new statements
+
 ## 1.1.22 / 2022-03-15
 
 - Updated dependencies

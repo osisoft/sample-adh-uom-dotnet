@@ -11,7 +11,7 @@ namespace UomsSample
 {
     public static class Program
     {
-        private static readonly Random _random = new Random();
+        private static readonly Random _random = new ();
         private static IConfiguration _configuration;
         private static Exception _toThrow;
 
@@ -41,8 +41,8 @@ namespace UomsSample
             string streamWithoutPropertyOverridden = $"{resourcePrefix} UomNoPropertyOverridden";
 
             // Step 1 
-            AuthenticationHandler authenticationHandler = new AuthenticationHandler(new Uri(resource), clientId, clientSecret);
-            SdsService service = new SdsService(new Uri(resource), authenticationHandler);
+            AuthenticationHandler authenticationHandler = new (new Uri(resource), clientId, clientSecret);
+            SdsService service = new (new Uri(resource), authenticationHandler);
 
             ISdsMetadataService metadataService = service.GetMetadataService(tenantId, namespaceId);
             ISdsDataService dataService = service.GetDataService(tenantId, namespaceId);
@@ -79,7 +79,7 @@ namespace UomsSample
 
                 // Step 3
                 // Creating a Stream overriding the distance property.
-                SdsStream sdsStreamOne = new SdsStream()
+                SdsStream sdsStreamOne = new ()
                 {
                     Id = streamWithPropertyOverridden,
                     TypeId = typeId,
@@ -98,7 +98,7 @@ namespace UomsSample
 
                 // Step 4
                 // Creating a Stream without overriding properties.
-                SdsStream sdsStreamTwo = new SdsStream()
+                SdsStream sdsStreamTwo = new ()
                 {
                     Id = streamWithoutPropertyOverridden,
                     TypeId = typeId,
@@ -112,7 +112,7 @@ namespace UomsSample
                 IList<Widget> data = new List<Widget>();
                 for (int i = 0; i < 10; i++)
                 {
-                    Widget widget = new Widget
+                    Widget widget = new ()
                     {
                         Time = DateTime.UtcNow.AddSeconds(i),
                         Temperature = _random.Next(1, 100),

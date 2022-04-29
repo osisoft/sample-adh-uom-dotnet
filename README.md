@@ -3,11 +3,11 @@
 | :loudspeaker: **Notice**: Samples have been updated to reflect that they work on AVEVA Data Hub.  The samples also work on OSIsoft Cloud Services unless otherwise noted. |
 | -----------------------------------------------------------------------------------------------|  
 
-**Version:** 1.1.23
+**Version:** 1.2.0
 
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-uom-dotnet?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2625&branchName=main)
 
-Developed against DotNet 5.0.
+Developed against DotNet 6.0.
 
 ## Running the sample
 
@@ -17,8 +17,8 @@ Replace the placeholders in the `appsettings.json` file with your TenantID, Name
 
 ### Requirements
 
-- .NET 5.0 or later
-  - Note: Visual Studio 16.8 or later is required for development against .NET 5.0
+- .NET 6.0 or later
+  - Note: Visual Studio 17.1 or later is required for development against .NET 6.0
 - Reliable internet connection
 
 ### Using Visual Studio
@@ -52,7 +52,7 @@ The UOM sample follows these steps
 
 ---
 
-Tested against DotNet 5.0.
+Tested against DotNet 6.0.
 
 For the main ADH samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS)  
 For the main AVEVA samples page [ReadMe](https://github.com/osisoft/OSI-Samples)

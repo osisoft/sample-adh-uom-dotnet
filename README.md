@@ -1,6 +1,6 @@
 # UOMs DotNet Sample
 
-**Version:** 1.2.3
+**Version:** 1.2.4
 
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-uom-dotnet?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2625&branchName=main)
 

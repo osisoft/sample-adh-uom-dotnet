@@ -33,7 +33,7 @@
 
 ## 1.1.21 / 2022-02-02
 
-- Updated for AVEVA Data Hub
+- Updated for CONNECT data services
 - Updated dependencies
 
 ## 1.1.20 / 2022-01-17

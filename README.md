@@ -2,7 +2,7 @@
 
 **Version:** 1.2.4
 
-[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-uom-dotnet?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2625&branchName=main)
+[![Build Status](https://dev.azure.com/AVEVA-VSTS/Cloud%20Platform/_apis/build/status%2Fproduct-readiness%2FADH%2FAVEVA.sample-adh-uom-dotnet?repoName=AVEVA%2Fsample-adh-uom-dotnet&branchName=main)](https://dev.azure.com/AVEVA-VSTS/Cloud%20Platform/_build/latest?definitionId=16146&repoName=AVEVA%2Fsample-adh-uom-dotnet&branchName=main)
 
 Developed against DotNet 6.0.
 
@@ -51,5 +51,5 @@ The UOM sample follows these steps
 
 Tested against DotNet 6.0.
 
-For the main ADH samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS)  
-For the main AVEVA samples page [ReadMe](https://github.com/osisoft/OSI-Samples)
+For the main Cds samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations)  
+For the main AVEVA samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples)
